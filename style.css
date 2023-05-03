@@ -1,0 +1,704 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    background: url(https://gugaeight.github.io/facetoplayceproject.github.io/img/map.png) no-repeat #0a0911;
+    background-size: 100% 600px;
+    word-break: break-word;
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    display: inline-block;
+}
+
+/*эту хуйня чтоб нельзя было копировать картинки, они не будут считаться, как обьект, будут чтото типа фона, но ниже для ссылок user-select: none;, это чтоб можно было выделить и скопировать ссылку, но не само изображение*/
+img {
+    pointer-events: none;
+    max-width: 100%;
+}
+
+img:not(a img) {
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+}
+
+.navigation,
+.navigation > .left,
+.navigation > .right {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navigation {
+    justify-content: space-between;
+    align-items: center;
+
+    /* fix */
+    padding: 30px;
+}
+
+.navigation > .left {
+    justify-content: space-between;
+    align-items: center;
+
+    /* fix */
+    padding: 30px;
+}
+
+.navigation > .left > img {
+}
+
+.right > a:nth-child(2) {
+    margin-left: 30px;
+}
+
+.main {
+    text-align: center;
+    color: white;
+}
+
+/*маргины свои настрой, кстати, не забудь про body и размер backgground*/
+.about {
+    position: relative;
+    margin: 50px 0 100px 0;
+    line-height: 166%;
+}
+
+.about-text-one {
+    font-size: 16px;
+    color: #9D9CCA;
+}
+
+.about-text-two {
+    font-size: 48px;  
+    font-weight: 600;
+    padding-top: 12px;
+    padding-bottom: 22px; 
+    color: transparent;
+    -webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(180deg, #9B40FF, #564CFF, #8182FF, #8B42FF);
+    line-height: 124%;
+}
+
+.about-text-three {
+    font-size: 22px;
+    color: #9D9CCA;
+    padding-bottom: 32px;
+    line-height: 175%;
+}
+
+.about__but_one {
+    margin-left: 21.58px;
+}
+
+.face-one,
+.face-two,
+.face-three,
+.face-four {
+    position: absolute;
+    user-select: none;
+}
+
+.face-one {
+    top: -100px;
+    left: 10%;
+}
+
+.face-two {
+    top: -90px;
+    right: 10%;
+}
+
+.face-three {
+    left: 15%;
+    bottom: 2%;
+}
+
+.face-four {
+    right: 15%;
+    bottom: 2%;
+}
+
+.article {
+    width: 80%;
+    margin: auto;
+    padding-top: 200px;
+}
+
+.article__h1 {
+    font-size: 36px;
+	color: transparent;    
+    -webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(135deg, #9B40FF, #564CFF, #8182FF, #8B42FF);
+    padding-bottom: 28px;
+    line-height: 121.47%;
+}
+
+.article:nth-child(2) {
+    padding-top: 100px;
+}
+
+.article-width-85r {
+    width: 85%;
+}
+
+.article-width-100-pr {
+    width: 100%;
+}
+
+.blocks {
+    display: flex;
+    line-height: 166%;
+}
+
+/*flex basis размер для двух первых блоков по 3 блока*/
+.block {
+    flex-basis: 33.3333333333%;
+    border: 1px solid;
+}
+
+.block-dot {
+    flex-basis: 33.3333333333%;
+}
+
+.block-dot > div:nth-child(2) {
+    font-size: 48px;
+    font-weight: 800;
+    color: #9B99FF;
+    padding-top: 29.33px;
+}
+
+.block-dot > div:nth-child(3) {
+    font-size: 16px;
+    font-weight: 600;
+    color: #9D9CCA;
+    padding-top: 5.33px;
+}
+
+.block-dot > img {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%2327287FFF' stroke-width='2' stroke-dasharray='16%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 100px;    
+    background-color: #120e2a;
+    padding: 10px;
+    width: 106.67px;
+}
+
+.text-color-but {
+	background-image: linear-gradient(135deg, #9B40FF, #564CFF, #8182FF, #8B42FF);
+    color: transparent;    
+    -webkit-background-clip: text;
+	background-clip: text;
+    border-radius: 13px;    
+    font-size: 16px;
+}
+
+.last-but {
+    background-color: white;
+    width: 251px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='13' ry='13' stroke='%2327287FFF' stroke-width='2' stroke-dasharray='16%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 13px;
+    margin-top: 64px;
+}
+
+.block-can {
+    flex-basis: 33.3333333333%;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%23303082FF' stroke-width='2' stroke-dasharray='16%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 16px;  
+    background-color: #120e2a;  
+}
+
+.blocks > .block-can:nth-child(2) {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='white' stroke-width='2' stroke-dasharray='16%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e"), url(img/bg-horse.png);    
+    background-size: cover;
+    border-radius: 16px;
+    background-repeat: no-repeat;
+}
+
+
+.blocks > .block-can:nth-child(1),
+.blocks > .block-can:nth-child(2) {
+    margin-right: 24px;
+}
+
+.block__can {
+    padding-bottom: 16px;
+}
+
+.block-can > img {
+    padding-top: 33px;
+    padding-bottom: 26.33px;
+}
+
+.block__can_one {
+    color: #9B99FF;
+    font-size: 18px;
+
+}
+
+.sub__text {
+    color: #9D9CCA;
+}
+
+
+.sub__block_can {
+    padding-top: 16px;
+    padding-bottom: 23.67px;
+    color: #9D9CCA;
+}
+
+.sub__block_can-two {
+    padding-top: 16px;
+    padding-bottom: 23.67px;  
+    color: rgba(255, 255, 255, 0.8);  
+}
+
+.sub__text-two {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.block__can_two {
+    color: white;
+    font-size: 18px;
+
+}
+
+.blocks > .block__have:nth-child(1),
+.blocks > .block__have:nth-child(2) {
+    margin-right: 24px;
+}
+
+/* BLOCK HAVE */
+
+.block__have {
+    flex-basis: 33.3333333333%;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%23303082FF' stroke-width='2' stroke-dasharray='16%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 16px;  
+    background-color: #120e2a;    
+}
+
+.blocks > .block__have:nth-last-child(2) {
+    flex-basis: 33.3333333333%;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='white' stroke-width='2' stroke-dasharray='16%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e"), url(img/bg-human.png);    
+    background-size: cover;
+    border-radius: 16px;
+    background-repeat: no-repeat;    
+}
+
+.block__have > img {
+    padding-top: 32.9px;
+    padding-bottom: 26.67px;
+}
+
+.block__have_one {
+    color: #9B99FF;
+    font-size: 18px;
+}
+
+.block__have_two {
+    font-size: 18px;
+}
+
+.sub__have_text {
+    color: #9D9CCA;
+}
+
+.sub__have_text-two {
+    padding-top: 13.33px;
+    padding-bottom: 23.67px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.sub__have_text{
+    padding-top: 13.33px;
+    padding-bottom: 23.67px;
+}
+
+/* REVIEWS BLOCK */
+
+.reviews-blocks {
+    display: flex;
+    margin-left: 60px;
+}
+
+.review__img {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.block-rev {
+    flex-basis: 33.3333333333%; 
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='white' stroke-width='2' stroke-dasharray='16%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e"), url(img/bg-lady.png);
+    border-radius: 16px; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.six__block {
+    margin-left: 26.67px;
+}
+
+.block-rev-sub {
+    flex-basis: 33.3333333333%;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%2327287FFF' stroke-width='2' stroke-dasharray='16%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 16px;
+    background-color: #120e2a;   
+  
+}
+
+.reviews-blocks > .block {
+    background-color: #120e2a;
+}
+
+.reviews-blocks-rest > .block {
+    background-color: #120e2a;
+}
+
+.review-block-one > div,
+.review-block-one > img:nth-child(2),
+.review-block-three > div,
+.review-block-three > img:nth-child(2),
+.review-block-four > div,
+.review-block-four > img:nth-child(2)
+.review-block-five > div:nth-child(2),
+.review-block-five > img:nth-child(2) {
+    margin-left: 26.67px;
+}
+
+.review-block-one > .review__text {
+    margin-top: 21.33px;
+}
+
+.review__text {
+    font-size: 18px;
+}
+
+.review-block-one {
+    flex-basis: 25%;
+    margin-right: 24px;
+    text-align: left;
+}
+
+.review-block-one > img:nth-child(2) {
+    padding: 16px 0;
+}
+
+/*второй и щестой блок скриты, для адаптации, чтоб если экран маленьки, то они будут показываться как по макету*/
+.review-block-two,
+.review-block-six {
+    display: none;
+}
+
+/*контейнер для третего четвертого пятого блока, чтоб они встали с первым блоком, ну а второй скрыт для адаптации, как описал вышел*/
+.reviews-blocks-rest {
+    display: flex;
+    flex-basis: 75%;
+    flex-wrap: wrap;
+}
+
+/*эта хуйня используется, чтоб не делать float left для отзывов и городов этих типа где текст а справа картинки*/
+.block-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*flex-wrap: wrap;*/
+}
+
+.review-block-three {
+    flex-basis: 45%;
+    text-align: left;
+}
+
+.review-block-four {
+    flex-basis: 45%;
+    margin-left: 24px;
+    text-align: left;
+}
+
+.review-block-five {
+    flex-basis: calc(90% + 24px);
+    margin-top: 24px;
+    text-align: left;
+}
+
+/* CITIES */
+
+.block-cities {
+    flex-basis: 33.3333333333%;   
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%2327287FFF' stroke-width='2' stroke-dasharray='16%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 16px; 
+    background-color: #120e2a;
+}
+
+.block-cities > div:nth-child(1) {
+    padding-top: 19.33px;
+    padding-bottom: 19.33px;
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.block-cities > img {
+    margin-right: 24.67px;
+}
+
+.cities-text {
+    color: #9B99FF;
+    margin-left: 10.67px;
+}
+
+.cities {
+    justify-content: space-between;
+}
+
+
+.cities > * {
+    flex-basis: 20%;
+}
+
+.stat {
+    justify-content: space-between;
+}
+
+/*тоже такой себе варик, лучше сделать класс, но это похуй так тоже норм*/
+.stat > * {
+    flex-basis: 20%;
+    border: none;
+}
+
+.join {
+    justify-content: center;
+    align-items: center;
+}
+
+/*аналогично выше описано*/
+.join > * {
+    flex-basis: unset;
+    border: none;
+}
+
+/*полоска*/
+.snake {
+    height: 100px;
+    width: 1px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23FFFDFDFF' stroke-width='2' stroke-dasharray='5%2c 12' stroke-dashoffset='2' stroke-linecap='square'/%3e%3c/svg%3e");
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.last__block_text-1 {
+    text-align: left;
+    font-weight: 600;
+    font-size: 18px;
+    color: #9B99FF;
+}
+
+.last__block_text-2 {
+    text-align: left;
+    margin-top: 3px;
+    color: #9D9CCA;
+    font-size: 14px;
+}
+
+/*лучше сделай клаас а ваще похкй*/
+form {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 44px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='13' ry='13' stroke='%239D9CCAFF' stroke-width='2' stroke-dasharray='16%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 13px;
+    background: #120E2A;
+    
+}
+
+/*на свое усмотрение настроешь flex basis*/
+form > input[type="text"] {
+    flex-basis: 80%;
+    background: #120E2A;
+    border: 0px;
+    padding: 11px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='13' ry='13' stroke='%239D9CCAFF' stroke-width='2' stroke-dasharray='16%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 13px;
+}
+
+form > input[type="submit"] {
+    flex-basis: 20%;
+    border: 0px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='13' ry='13' stroke='%239D9CCAFF' stroke-width='2' stroke-dasharray='16%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 13px; 
+}
+
+.projects {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects > * {
+    border: 0;
+}
+
+.footer {
+    background: #120e2a;
+    line-height: 161.97%;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%2334387FFF' stroke-width='2' stroke-dasharray='16%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 16px;
+}
+
+.f-top {
+    display: flex;
+    justify-content: space-between;
+    color: #3D3C7D;
+    
+}
+
+.f-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foother__logo {
+    margin-top: 17px;
+}
+
+.foother__main_text {
+    font-weight: 500;
+    font-size: 16px;
+    color: #9D9CCA;
+    margin-top: 34px;
+}
+
+.foother__but_bot {
+    margin-right: 80px;
+}
+
+.foother__bot_text {
+    margin-left: 32px;
+}
+
+
+
+
+@media all and (max-width: 700px) {
+    .header {
+        position: unset;
+    }
+
+    .navigation > .left {
+        padding: 10px;
+    }
+
+    .navigation > .right,
+    .face-one,
+    .face-four {
+        display: none;
+    }
+
+    /*настроить расположение двух иконок*/
+    .face-two {
+        /**/
+    }
+
+    .face-three {
+        /**/
+    }
+
+    .about {
+        margin: 50px 0 100px 0;
+    }
+
+    .article:nth-child(3) .block {
+        border: none;
+    }
+
+    .article-width-85r {
+        width: 80%
+    }
+
+    .blocks {
+        display: block;
+    }
+    .blocks > .block-can:nth-child(1),
+    .blocks > .block-can:nth-child(2) {
+        margin-right: 0px;
+    }
+
+    .blocks > .block__have:nth-child(1),
+    .blocks > .block__have:nth-child(2) {
+        margin-right: 0px;
+    }
+
+    .last__block_text-1,
+    .last__block_text-2 {
+        text-align: center;
+
+    }
+    
+    .reviews-blocks,
+    .reviews-blocks-rest {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .reviews-blocks-rest {
+        flex-basis: 100%;
+    }
+
+    .reviews > *:not(.reviews-blocks-rest) {
+        flex-basis: 45%;
+    }
+
+    .reviews-blocks-rest > * {
+        flex-basis: 45%;
+    }
+
+    .review-block-one img:last-child,
+    .review-block-three img:last-child,
+    .review-block-four img:last-child,
+    .review-block-five div:last-child {
+        display: none;
+    }
+
+    .review-block-two,
+    .review-block-six {
+        display: block;
+    }
+
+    .snake {
+        display: none;
+    }
+
+    .article:last-child {
+        display: none;
+    }
+
+    .f-top,
+    .f-bottom {
+        display: block;
+        text-align: center;
+    }
+
+    .f-bottom a {
+        display: none;
+    }
+}
